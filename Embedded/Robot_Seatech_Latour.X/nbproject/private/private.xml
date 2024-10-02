@@ -5,8 +5,14 @@
         <group>
             <file>file:/C:/Github/SeaTech_Latour_Eloi/Embedded/Robot_Seatech_Latour.X/IO.c</file>
             <file>file:/C:/Github/SeaTech_Latour_Eloi/Embedded/Robot_Seatech_Latour.X/main.c</file>
+            <file>file:/C:/Github/SeaTech_Latour_Eloi/Embedded/Robot_Seatech_Latour.X/ToolBox.h</file>
+            <file>file:/C:/Github/SeaTech_Latour_Eloi/Embedded/Robot_Seatech_Latour.X/timer.h</file>
+            <file>file:/C:/Github/SeaTech_Latour_Eloi/Embedded/Robot_Seatech_Latour.X/Robot.h</file>
             <file>file:/C:/Github/SeaTech_Latour_Eloi/Embedded/Robot_Seatech_Latour.X/IO.h</file>
+            <file>file:/C:/Github/SeaTech_Latour_Eloi/Embedded/Robot_Seatech_Latour.X/ToolBox.c</file>
+            <file>file:/C:/Github/SeaTech_Latour_Eloi/Embedded/Robot_Seatech_Latour.X/Robot.c</file>
             <file>file:/C:/Github/SeaTech_Latour_Eloi/Embedded/Robot_Seatech_Latour.X/ChipConfig.h</file>
+            <file>file:/C:/Github/SeaTech_Latour_Eloi/Embedded/Robot_Seatech_Latour.X/timer.c</file>
             <file>file:/C:/Github/SeaTech_Latour_Eloi/Embedded/Robot_Seatech_Latour.X/ChipConfig.c</file>
         </group>
     </open-files>
