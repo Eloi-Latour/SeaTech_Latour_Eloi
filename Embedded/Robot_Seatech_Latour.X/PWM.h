@@ -9,4 +9,4 @@ void PWMUpdateSpeed();
 void PWMSetSpeedConsigne(float vitesseEnPourcents, char Moteur);
 
 
-#endif /* TOOLBOX_H */
+#endif /* PWM_H */
