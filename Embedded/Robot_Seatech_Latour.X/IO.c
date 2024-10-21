@@ -32,6 +32,9 @@ void InitIO()
     _TRISK15 = 0; // LED Rouge
     _TRISA9 = 0; // LED Verte 
     
+    //******* BOUTTON ***************************
+    
+    _TRISH1 = 1;
 
     
     //****** Moteurs ************************

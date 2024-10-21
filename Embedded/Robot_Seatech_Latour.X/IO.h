@@ -14,6 +14,9 @@
 #define LED_ROUGE_2 _LATA10
 #define LED_VERTE_2 _LATH3
 
+//Affectation PIN Bouton
+#define BUTTON _RH1
+
 // Prototypes fonctions
 void InitIO();
 void LockIO();
