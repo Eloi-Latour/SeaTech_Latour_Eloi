@@ -1,3 +1,4 @@
+
 /* 
  * File:   main.c
  * Author: TABLE 6
@@ -186,13 +187,17 @@ void SetNextRobotStateInAutomaticMode() {
         positionObstacle = OBSTACLE_A_DROITE; */
 
 
-    if (robotState.distanceTelemetreDroit < 20 &&
-            robotState.distanceTelemetreDroit2 < 15 &&
-            robotState.distanceTelemetreCentre < 30) //Obstacle àdroite
-        positionObstacle = OBSTACLE_A_DROITE;
-    else if (robotState.distanceTelemetreDroit < 20 &&
+    if (robotState.distanceTelemetreDroit < 30 &&
             robotState.distanceTelemetreDroit2 < 30 &&
-            robotState.distanceTelemetreCentre < 20) //Obstacle àdroite
+            robotState.distanceTelemetreCentre < 40 &&//Obstacle àdroite
+            robotState.distanceTelemetreGauche > 30 &&
+            robotState.distanceTelemetreGauche2 > 30)
+        positionObstacle = OBSTACLE_A_DROITE;
+    else if (robotState.distanceTelemetreDroit < 30 &&
+            robotState.distanceTelemetreDroit2 < 30 &&
+            robotState.distanceTelemetreCentre < 30 &&
+            robotState.distanceTelemetreGauche > 30 &&
+            robotState.distanceTelemetreGauche2 > 30) //Obstacle àdroite
         positionObstacle = OBSTACLE_A_DROITE;
     else if (robotState.distanceTelemetreDroit < 15 &&
             robotState.distanceTelemetreDroit2 < 20 &&
