@@ -187,9 +187,9 @@ void SetNextRobotStateInAutomaticMode() {
         positionObstacle = OBSTACLE_A_DROITE; */
 
 
-    if (robotState.distanceTelemetreDroit < 30 &&
+    /*if (robotState.distanceTelemetreDroit < 30 &&
             robotState.distanceTelemetreDroit2 < 30 &&
-            robotState.distanceTelemetreCentre < 40 &&//Obstacle àdroite
+            robotState.distanceTelemetreCentre < 30 &&//Obstacle àdroite
             robotState.distanceTelemetreGauche > 30 &&
             robotState.distanceTelemetreGauche2 > 30)
         positionObstacle = OBSTACLE_A_DROITE;
@@ -198,14 +198,18 @@ void SetNextRobotStateInAutomaticMode() {
             robotState.distanceTelemetreCentre < 30 &&
             robotState.distanceTelemetreGauche > 30 &&
             robotState.distanceTelemetreGauche2 > 30) //Obstacle àdroite
-        positionObstacle = OBSTACLE_A_DROITE;
-    else if (robotState.distanceTelemetreDroit < 15 &&
-            robotState.distanceTelemetreDroit2 < 20 &&
-            robotState.distanceTelemetreCentre < 20) //Obstacle àdroite
+        positionObstacle = OBSTACLE_A_DROITE;*/
+    else if (robotState.distanceTelemetreDroit < 30 &&
+            robotState.distanceTelemetreDroit2 < 30 &&
+            robotState.distanceTelemetreCentre < 30 &&
+            robotState.distanceTelemetreGauche2 > 30 &&
+            robotState.distanceTelemetreGauche > 30 &&) //Obstacle àdroite
         positionObstacle = OBSTACLE_A_DROITE;
     else if (robotState.distanceTelemetreCentre < 30 &&
-            robotState.distanceTelemetreGauche < 20 &&
-            robotState.distanceTelemetreGauche2 < 15) //Obstacle àgauche
+            robotState.distanceTelemetreGauche < 30 &&
+            robotState.distanceTelemetreGauche2 < 30 &&
+            robotState.distanceTelemetreDroit > 30 &&
+            robotState.distanceTelemetreDroit2 > 30) //Obstacle àgauche
         positionObstacle = OBSTACLE_A_GAUCHE;
     else if (robotState.distanceTelemetreCentre < 20 &&
             robotState.distanceTelemetreGauche < 15 &&
