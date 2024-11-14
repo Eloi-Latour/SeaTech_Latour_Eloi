@@ -22,7 +22,11 @@ void InitTimer1(void) {
     IFS0bits.T1IF = 0; // Clear Timer Interrupt Flag
     IEC0bits.T1IE = 1; // Enable Timer interrupt
     T1CONbits.TON = 1; // Enable Timer
+<<<<<<< HEAD
     SetFreqTimer1(500); //fréquence définie par le sujet 2.5Hz
+=======
+    SetFreqTimer1(50s0); //fréquence définie par le sujet 2.5Hz
+>>>>>>> b2e85c1453b80f3f3dee07596742b50bbccd8be0
 }
 
 //Interruption du timer 1
