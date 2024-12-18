@@ -24,8 +24,6 @@ void InitTimer1(void) {
     T1CONbits.TON = 1; // Enable Timer
 
     SetFreqTimer1(500); //fréquence définie par le sujet 2.5Hz
-=======
-    SetFreqTimer1(50s0); //fréquence définie par le sujet 2.5Hz
 }
 
 //Interruption du timer 1

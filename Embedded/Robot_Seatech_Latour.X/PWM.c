@@ -43,7 +43,7 @@ double talon = 50;
     }
 }*/
 
-float acceleration = 10;
+float acceleration = 50;
 
 void PWMUpdateSpeed() {
     // Cette fonction est appelee sur timer et permet de suivre des rampes d acceleration
