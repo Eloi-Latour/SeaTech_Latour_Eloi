@@ -23,7 +23,7 @@
             <ColumnDefinition Width="30"/>
         </Grid.ColumnDefinitions>
         <GroupBox Header="Emission" Background ="#FFDDDDDD" Grid.Row="1" BorderBrush="#FF000000" Grid.Column="1">
-            <TextBox x:Name="textBoxEmission" TextWrapping="Wrap" AcceptsReturn="True">
+            <TextBox x:Name="textBoxEmission" TextWrapping="Wrap" AcceptsReturn="True" TextChanged="textBoxEmission_TextChanged">
                 <TextBox.BorderBrush>
                     <SolidColorBrush Color="Black" Opacity="0"/>
                 </TextBox.BorderBrush>
