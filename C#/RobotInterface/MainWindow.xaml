@@ -8,21 +8,14 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="173*"/>
-            <RowDefinition Height="14*"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="30"/>
             <ColumnDefinition/>
-            <ColumnDefinition Width="30"/>
             <ColumnDefinition/>
-            <ColumnDefinition Width="30"/>
         </Grid.ColumnDefinitions>
-        <GroupBox Header="Emission" Background ="#FFDDDDDD" Grid.Row="1" BorderBrush="#FF000000" Grid.Column="1">
+        <GroupBox Header="Emission" Grid.Row="0" Grid.Column="0" Margin="5">
             <TextBox x:Name="textBoxEmission" TextWrapping="Wrap" AcceptsReturn="True" TextChanged="textBoxEmission_TextChanged">
                 <TextBox.BorderBrush>
                     <SolidColorBrush Color="Black" Opacity="0"/>
@@ -32,7 +25,7 @@
                 </TextBox.Background>
             </TextBox>
         </GroupBox>
-        <GroupBox Header="Réception" Background ="#FFDDDDDD" Grid.Row="1" BorderBrush="#FF000000" Grid.Column="3" >
+        <GroupBox Header="Réception" Grid.Row="0" Grid.Column="1" Margin="5">
             <TextBox x:Name="textBoxReception" TextWrapping="Wrap" AcceptsReturn="True" IsReadOnly="True">
                 <TextBox.BorderBrush>
                     <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
@@ -42,7 +35,9 @@
                 </TextBox.Background>
             </TextBox>
         </GroupBox>
-        <Button x:Name="buttonEnvoyer" Grid.Column="1" Content="Envoyer" Margin="100,0,100,0" Grid.Row="4" Click="buttonEnvoyer_Click"/>
 
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+            <Button x:Name="buttonEnvoyer" Content="Envoyer" Click="buttonEnvoyer_Click" Width="60" Margin="8"/>
+        </StackPanel>
     </Grid>
 </Window>

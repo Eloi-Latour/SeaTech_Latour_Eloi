@@ -26,7 +26,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        serialPort1 = new ExtendedSerialPort("COM7", 115200, Parity.None, 8, StopBits.One);
+        serialPort1 = new ExtendedSerialPort("COM5", 115200, Parity.None, 8, StopBits.One);
         serialPort1.Open();
     }
     void SendMessage()
