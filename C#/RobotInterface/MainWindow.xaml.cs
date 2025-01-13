@@ -23,7 +23,6 @@ public partial class MainWindow : Window
 {
     
     ExtendedSerialPort serialPort1;
-    string receivedText;
     DispatcherTimer timerAffichage;
     /// <summary>
     /// Init timer affichage
@@ -46,8 +45,12 @@ public partial class MainWindow : Window
 
     private void TimerAffichage_Tick(object? sender, EventArgs e)
     {
-        textBoxReception.Text += receivedText;
-        receivedText = "";
+        while (robot.byteListReceived.Count > 0)
+        {
+            var v = robot.byteListReceived.Dequeue();
+            textBoxReception.Text += v.ToString("X2")+ " ";
+        }
+        //robot.receivedText = "";
     }
 
     void SendMessage()
@@ -63,13 +66,22 @@ public partial class MainWindow : Window
     }
     void Test()
     {
-        textBoxReception.Text += ("Reçu :" + "Test" + "\n");
-        textBoxEmission.Text = null;
+        byte[] byteList = new byte[20];
+        for (int i = 0; i < 20; i++)
+        {
+            byteList[i] = (byte)(2 * i);
+        }
+        serialPort1.Write(byteList, 0, byteList.Length);
     }
 
     public void SerialPort1_DataReceived(object sender, DataReceivedArgs e)
     {
-        receivedText += Encoding.UTF8.GetString(e.Data, 0, e.Data.Length);
+        //robot.receivedText += Encoding.UTF8.GetString(e.Data, 0, e.Data.Length);
+        foreach (var item in e.Data) 
+        { 
+            robot.byteListReceived.Enqueue(item); 
+        }
+        
     }
 
 
