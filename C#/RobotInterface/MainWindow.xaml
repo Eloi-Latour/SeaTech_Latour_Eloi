@@ -38,6 +38,8 @@
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
             <Button x:Name="buttonEnvoyer" Content="Envoyer" Click="buttonEnvoyer_Click" Width="60" Margin="8"/>
+            <Button x:Name="buttonClear" Content="Clear" Click="buttonClear_Click" Width="60" Margin="8"/>
+            <Button x:Name="buttonTest" Content="Test" Click="buttonTest_Click" Width="60" Margin="8"/>
         </StackPanel>
     </Grid>
 </Window>
