@@ -98,9 +98,9 @@ int main(void) {
                 LED_ROUGE_1 = 0;
             }
         }
-        SendMessage("Bonjour", 7);
-        //SendMessageDirect((unsigned char*) "Bonjour", 7);
-        __delay32(4000000);
+//        SendMessage("Bonjour", 7);
+//        //SendMessageDirect((unsigned char*) "Bonjour", 7);
+//        __delay32(4000000);
 
     }
 } // fin main
