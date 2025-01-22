@@ -16,6 +16,8 @@
 #include "ADC.h"
 #include "Robot.h"
 #include "main.h"
+#include "UART.h"
+#include "CB_TX1.h"
 
 int main(void) {
     /***********************************************************************************************/
@@ -28,6 +30,7 @@ int main(void) {
     InitTimer4();
     InitPWM();
     InitADC1();
+    InitUART();
     //PWMSetSpeedConsigne(20, MOTEUR_GAUCHE);
 
     /***********************************************************************************************/
@@ -95,6 +98,10 @@ int main(void) {
                 LED_ROUGE_1 = 0;
             }
         }
+        SendMessage("Bonjour", 7);
+        //SendMessageDirect((unsigned char*) "Bonjour", 7);
+        __delay32(4000000);
+
     }
 } // fin main
 
@@ -325,4 +332,3 @@ void SetNextRobotStateInAutomaticMode() {
     if (nextStateRobot != stateRobot - 1)
         stateRobot = nextStateRobot;
 }
-
