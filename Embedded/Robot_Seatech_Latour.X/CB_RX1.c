@@ -14,11 +14,11 @@ void CB_RX1_Add(unsigned char value)
 {
 if(CB_RX1_GetRemainingSize()>0)
 {
-    cbTx1Buffer[cbTx1Head] = value;
-    cbTx1Head += 1;
-    if (cbTx1Head >= CBRX1_BUFFER_SIZE)
+    cbRx1Buffer[cbRx1Head] = value;
+    cbRx1Head += 1;
+    if (cbRx1Head >= CBRX1_BUFFER_SIZE)
     {
-        cbTx1Head = 0;
+        cbRx1Head = 0;
     }
 }
 }
@@ -26,10 +26,10 @@ if(CB_RX1_GetRemainingSize()>0)
 unsigned char CB_RX1_Get(void)
 {
 unsigned char value=cbRx1Buffer[cbRx1Tail];
-cbTx1Tail += 1;
-    if (cbTx1Tail >= CBRX1_BUFFER_SIZE)
+cbRx1Tail += 1;
+    if (cbRx1Tail >= CBRX1_BUFFER_SIZE)
     {
-        cbTx1Tail = 0;
+        cbRx1Tail = 0;
     }
 return value;
 }
@@ -62,13 +62,13 @@ int CB_RX1_GetDataSize(void)
 {
 //return size of data stored in circular buffer
 int dataSize;
-    if (cbTx1Tail <= cbTx1Head)
+    if (cbRx1Tail <= cbRx1Head)
     {
-        dataSize = cbTx1Head-cbTx1Tail;
+        dataSize = cbRx1Head-cbRx1Tail;
     }
     else
     {
-        dataSize = CBRX1_BUFFER_SIZE - (cbTx1Tail - cbTx1Head );
+        dataSize = CBRX1_BUFFER_SIZE - (cbRx1Tail - cbRx1Head );
     }
 return dataSize;
 }
@@ -76,6 +76,6 @@ return dataSize;
 int CB_RX1_GetRemainingSize(void)
 {
 //return size of remaining size in circular buffer
-return CBRX1_BUFFER_SIZE - CB_TX1_GetDataSize();
+return CBRX1_BUFFER_SIZE - CB_RX1_GetDataSize();
 }
 
